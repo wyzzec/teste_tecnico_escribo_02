@@ -14,7 +14,7 @@ class PacMan extends SimplePlayer with ObjectCollision {
         idleDown: PacManSprite.idleDown,
         runDown: PacManSprite.runDown,),
     position: position ?? Vector2(10, 10),
-    speed: 80,
+    speed: 60,
   ){
     setupCollision(CollisionConfig(collisions: [
       CollisionArea.circle(radius: 6, align: Vector2(4, 4))

@@ -1,9 +1,9 @@
+import 'package:bonfire/player/player.dart';
 import 'package:flutter/widgets.dart';
-import 'package:teste_tecnico_02_escribo/main.dart';
 
 class IncrementadorDePontos extends ChangeNotifier {
-  void incrementar(){
-    pontosTotais = pontosTotais + 10;
+  void incrementar(Player player){
+    player.points = player.points + 10;
     notifyListeners();
   }
 }

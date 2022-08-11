@@ -9,8 +9,6 @@ import 'components/ancora_camera/ancora_camera.dart';
 
 class Game extends StatelessWidget {
   Game({Key? key}) : super(key: key);
-  PacMan pacMan = PacMan(null);
-
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
@@ -20,9 +18,7 @@ class Game extends StatelessWidget {
         left: 10,
         child: Consumer<IncrementadorDePontos>(
           builder: (BuildContext context, IncrementadorDePontos value, Widget? child) {
-            return ContadorDePontosWidget(
-              player: pacMan,
-            );
+            return ContadorDePontosWidget();
           },
         ),
       ),
@@ -45,10 +41,10 @@ class Game extends StatelessWidget {
             map: TiledWorldMap(
               'mapa.tmj',
               objectsBuilder: {
-                'ponto': (p) => PontosNoChao(incrementadorDePontos: context.read<IncrementadorDePontos>(), position: p.position),
+                'ponto': (p) => PontosNoChao(incrementadorDePontos: context.read<IncrementadorDePontos>(), position: p.position, player: context.read<PacMan>()),
               },
             ),
-            player: pacMan.setPositon(Vector2(2*58, 1*34)),
+            player: context.watch<PacMan>().setPositon(Vector2(2*58, 1*34)),
             cameraConfig: CameraConfig(zoom: 1.8, target: AncoraCamera(),),
           ),
         ),
