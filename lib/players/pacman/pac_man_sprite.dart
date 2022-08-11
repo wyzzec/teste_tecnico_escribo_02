@@ -25,7 +25,7 @@ class PacManSprite {
           textureSize: Vector2(20, 20),
         ),
       );
-    static get idleDown => SpriteAnimation.load(
+  static get idleDown => SpriteAnimation.load(
         'players/pacman/pacman_1_baixo.png',
         SpriteAnimationData.sequenced(
           amount: 1,
@@ -33,7 +33,7 @@ class PacManSprite {
           textureSize: Vector2(20, 20),
         ),
       );
-      static get runRight => SpriteAnimation.load(
+  static get runRight => SpriteAnimation.load(
         'players/pacman/pacman_direita.png',
         SpriteAnimationData.sequenced(
           amount: 3,
@@ -41,7 +41,7 @@ class PacManSprite {
           textureSize: Vector2(20, 20),
         ),
       );
-        static get runLeft => SpriteAnimation.load(
+  static get runLeft => SpriteAnimation.load(
         'players/pacman/pacman_esquerda.png',
         SpriteAnimationData.sequenced(
           amount: 3,
@@ -49,7 +49,7 @@ class PacManSprite {
           textureSize: Vector2(20, 20),
         ),
       );
-          static get runUp => SpriteAnimation.load(
+  static get runUp => SpriteAnimation.load(
         'players/pacman/pacman_cima.png',
         SpriteAnimationData.sequenced(
           amount: 3,
@@ -57,7 +57,7 @@ class PacManSprite {
           textureSize: Vector2(20, 20),
         ),
       );
-            static get runDown => SpriteAnimation.load(
+  static get runDown => SpriteAnimation.load(
         'players/pacman/pacman_baixo.png',
         SpriteAnimationData.sequenced(
           amount: 3,
@@ -65,5 +65,13 @@ class PacManSprite {
           textureSize: Vector2(20, 20),
         ),
       );
-
+  static get pacManDead => SpriteAnimation.load(
+        'players/pacman/morte_pac_man.png',
+        SpriteAnimationData.sequenced(
+          amount: 11,
+          stepTime: 0.1,
+          textureSize: Vector2(20, 20),
+          loop: false,
+        ),
+      );
 }

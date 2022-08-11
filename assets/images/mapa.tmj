@@ -939,6 +939,18 @@
                  "width":10,
                  "x":238.650858211991,
                  "y":98.8639876352396
+                }, 
+                {
+                 "class":"",
+                 "ellipse":true,
+                 "height":7.0283901407305,
+                 "id":181,
+                 "name":"fantasmaVermelho",
+                 "rotation":0,
+                 "visible":true,
+                 "width":6.24745790287159,
+                 "x":274.497681607419,
+                 "y":60.5222484340682
                 }],
          "offsetx":-1.95233059464735,
          "offsety":-1.95233059464736,
@@ -949,7 +961,7 @@
          "y":0
         }],
  "nextlayerid":3,
- "nextobjectid":181,
+ "nextobjectid":182,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.9.0",

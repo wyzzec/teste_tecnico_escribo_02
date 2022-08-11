@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:teste_tecnico_02_escribo/components/estado_do_jogo.dart';
 import 'package:teste_tecnico_02_escribo/components/incrementador_de_pontos.dart';
 import 'package:teste_tecnico_02_escribo/game.dart';
 import 'package:teste_tecnico_02_escribo/players/pacman/pac_man.dart';
@@ -14,7 +15,7 @@ class AppWidget extends StatelessWidget {
             backgroundColor: Colors.black,
             body: MultiProvider(providers: [
               ChangeNotifierProvider.value(value: IncrementadorDePontos()),
-              Provider.value(value: PacMan(null)),
+              Provider.value(value: PacMan(null, estadoDoJogo: context.read<EstadoDoJogo>())),
             ],
             child: Game())),
       ),
