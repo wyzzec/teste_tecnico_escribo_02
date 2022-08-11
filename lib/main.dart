@@ -1,6 +1,7 @@
+import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
 import 'package:teste_tecnico_02_escribo/app_widget.dart';
-double tileSize = 36;
+Vector2 tileSize = Vector2(58, 34);
 double pontosTotais = 0;
 void main() {
   runApp(const AppWidget());

@@ -4,7 +4,6 @@ import 'package:provider/provider.dart';
 import 'package:teste_tecnico_02_escribo/components/contador_de_pontos_widget.dart';
 import 'package:teste_tecnico_02_escribo/components/incrementador_de_pontos.dart';
 import 'package:teste_tecnico_02_escribo/components/pontos_no_chao.dart';
-import 'package:teste_tecnico_02_escribo/main.dart';
 import 'package:teste_tecnico_02_escribo/players/pacman/pac_man.dart';
 import 'components/ancora_camera/ancora_camera.dart';
 
@@ -16,6 +15,7 @@ class Game extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(children: [
       Positioned(
+
         top: 10,
         left: 10,
         child: Consumer<IncrementadorDePontos>(
@@ -27,13 +27,18 @@ class Game extends StatelessWidget {
         ),
       ),
       Positioned(
-        top: 100,
+        top: 40,
         left: 40,
-        child: Container(
-          width: 800,
-          height: 400,
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(
+            maxWidth: 800,
+            maxHeight: 800,
+            minWidth: 100,
+            minHeight: 100,
+          ),
           child: BonfireTiledWidget(
-            showCollisionArea: false,
+
+            showCollisionArea: true,
             joystick: Joystick(
               directional: JoystickDirectional(),
             ),
@@ -42,10 +47,9 @@ class Game extends StatelessWidget {
               objectsBuilder: {
                 'ponto': (p) => PontosNoChao(incrementadorDePontos: context.read<IncrementadorDePontos>(), position: p.position),
               },
-              forceTileSize: Size(tileSize, tileSize),
             ),
-            player: pacMan.setPositon(Vector2(9 * 20, 6 * 20)),
-            cameraConfig: CameraConfig(zoom: 1, target: AncoraCamera(), sizeMovementWindow: Vector2(50, 50)),
+            player: pacMan.setPositon(Vector2(2*58, 1*34)),
+            cameraConfig: CameraConfig(zoom: 1.8, target: AncoraCamera(),),
           ),
         ),
       ),

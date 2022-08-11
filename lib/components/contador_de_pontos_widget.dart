@@ -12,6 +12,6 @@ class ContadorDePontosWidget extends StatefulWidget {
 class _ContadorDePontosWidgetState extends State<ContadorDePontosWidget> {
   @override
   Widget build(BuildContext context) {
-    return Text(pontosTotais.toString(), style: const TextStyle(color: Colors.green),);
+    return Text(pontosTotais.toString(), style: const TextStyle(color: Colors.green, fontSize: 18),);
   }
 }

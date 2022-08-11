@@ -6,7 +6,7 @@ import 'package:teste_tecnico_02_escribo/main.dart';
 class PontosNoChao extends GameDecoration with Sensor {
   final double pontos = 0;
   final IncrementadorDePontos incrementadorDePontos;
-  PontosNoChao({required Vector2 position, required this.incrementadorDePontos}) : super.withAnimation(animation: SpritesDoGame.pontosNoChao(), position: position, size: Vector2(10, 10)){
+  PontosNoChao({required Vector2 position, required this.incrementadorDePontos}) : super.withAnimation(animation: SpritesDoGame.pontosNoChao(), position: position, size: Vector2(3, 3)){
     setupSensorArea(intervalCheck: 100);
   }
 
