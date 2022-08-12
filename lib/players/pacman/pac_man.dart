@@ -3,9 +3,8 @@ import 'package:teste_tecnico_02_escribo/components/estado_do_jogo.dart';
 import 'package:teste_tecnico_02_escribo/players/pacman/pac_man_sprite.dart';
 
 class PacMan extends SimplePlayer with ObjectCollision {
-  PacMan(
-    Vector2? position, {required this.estadoDoJogo}
-  ) : super(
+  PacMan(Vector2? position, {required this.estadoDoJogo})
+      : super(
           size: Vector2(20, 20),
           animation: SimpleDirectionAnimation(
             idleRight: PacManSprite.idleRight,
@@ -23,17 +22,79 @@ class PacMan extends SimplePlayer with ObjectCollision {
     setupCollision(CollisionConfig(collisions: [CollisionArea.circle(radius: 6, align: Vector2(4, 4))]));
   }
 
+  bool modoPoderosoAtivado = false;
   EstadoDoJogo estadoDoJogo;
+  bool moverDireita = false;
+  bool moverEsquerda = false;
+  bool moverCima = false;
+  bool moverBaixo = false;
 
+  @override
+  void update(double dt) {
+    if (moverDireita){
+      moveRight(speed);
+    }
+    if (moverEsquerda){
+      moveLeft(speed);
+    }
+    if (moverCima){
+      moveUp(speed);
+    }
+    if (moverBaixo){
+      moveDown(speed);
+    }
+    super.update(dt);
+  }
+
+  @override
+  bool moveRight(double speed, {bool notifyOnMove = true}) {
+    moverEsquerda = false;
+    moverCima = false;
+    moverBaixo = false;
+    moverDireita = true;
+    return super.moveRight(speed);
+  }
+  @override
+  bool moveLeft(double speed, {bool notifyOnMove = true}) {
+    moverEsquerda = true;
+    moverCima = false;
+    moverBaixo = false;
+    moverDireita = false;
+
+    return super.moveLeft(speed);
+  }
+  @override
+  bool moveUp(double speed, {bool notifyOnMove = true}) {
+    moverEsquerda = false;
+    moverCima = true;
+    moverBaixo = false;
+    moverDireita = false;
+    return super.moveUp(speed);
+  }
+  @override
+  bool moveDown(double speed, {bool notifyOnMove = true}) {
+    moverEsquerda = false;
+    moverCima = false;
+    moverBaixo = true;
+    moverDireita = false;
+    return super.moveDown(speed);
+  }
   @override
   void die() {
     gameRef.add(GameDecoration.withAnimation(animation: PacManSprite.pacManDead, position: position, size: size));
     removeFromParent();
-      estadoDoJogo.mudarEstado();
+    estadoDoJogo.mudarEstado();
     super.die();
   }
 
   PacMan setPositon(Vector2 position, EstadoDoJogo estadoDoJogo) {
     return PacMan(position, estadoDoJogo: estadoDoJogo);
+  }
+
+  void ativarPoder() {
+    modoPoderosoAtivado = true;
+    Future.delayed(const Duration(seconds: 10), () {
+      modoPoderosoAtivado = false;
+    });
   }
 }

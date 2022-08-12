@@ -9,4 +9,12 @@ class SpritesDoGame {
       textureSize: Vector2(10, 10),
     ),
   );
+    static Future<SpriteAnimation> frutasNoChao() => SpriteAnimation.load(
+    'fruta_no_chao.png',
+    SpriteAnimationData.sequenced(
+      amount: 1,
+      stepTime: 1,
+      textureSize: Vector2(10, 10),
+    ),
+  );
 }
