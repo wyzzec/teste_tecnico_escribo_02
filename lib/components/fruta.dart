@@ -1,12 +1,11 @@
 import 'package:bonfire/bonfire.dart';
-import 'package:teste_tecnico_02_escribo/components/sprites_do_game.dart';
 import 'package:teste_tecnico_02_escribo/players/pacman/pac_man.dart';
 
 class Fruta extends GameDecoration with Sensor {
 
   final PacMan pacMan;
 
-  Fruta ({required Vector2 position, required this.pacMan}) : super.withAnimation(animation: SpritesDoGame.frutasNoChao(), position: position, size: Vector2(20, 20)){
+  Fruta ({required Vector2 position, required this.pacMan}) : super.withSprite(sprite: Sprite.load('fruta_no_chao.png'), position: position, size: Vector2(30, 30)){
     setupSensorArea(intervalCheck: 100);
   }
 

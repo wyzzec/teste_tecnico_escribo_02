@@ -274,8 +274,8 @@
                  "rotation":0,
                  "visible":true,
                  "width":10,
-                 "x":449.112096314976,
-                 "y":123.853819246726
+                 "x":449.65755086043,
+                 "y":124.853819246726
                 }, 
                 {
                  "class":"",
@@ -720,8 +720,8 @@
                  "rotation":0,
                  "visible":true,
                  "width":10,
-                 "x":10.2281786382494,
-                 "y":119.558691938502
+                 "x":10.4402998503706,
+                 "y":11.0435404233505
                 }, 
                 {
                  "class":"",
@@ -943,18 +943,6 @@
                 {
                  "class":"",
                  "ellipse":true,
-                 "height":7.0283901407305,
-                 "id":181,
-                 "name":"fantasmaVermelho",
-                 "rotation":0,
-                 "visible":true,
-                 "width":6.24745790287159,
-                 "x":288.944928007809,
-                 "y":59.7413161962092
-                }, 
-                {
-                 "class":"",
-                 "ellipse":true,
                  "height":20,
                  "id":182,
                  "name":"fruta",
@@ -1023,6 +1011,50 @@
                  "width":5.85699,
                  "x":403.156268686651,
                  "y":34.1657862982998
+                }, 
+                {
+                 "class":"",
+                 "height":8,
+                 "id":191,
+                 "name":"fantasmaVermelho",
+                 "rotation":0,
+                 "visible":true,
+                 "width":8,
+                 "x":304.300397306671,
+                 "y":55.6200914415451
+                }, 
+                {
+                 "class":"",
+                 "height":8,
+                 "id":192,
+                 "name":"fantasmaRosa",
+                 "rotation":0,
+                 "visible":true,
+                 "width":8,
+                 "x":274.672027564344,
+                 "y":55.8689972613141
+                }, 
+                {
+                 "class":"",
+                 "height":8,
+                 "id":193,
+                 "name":"fantasmaAzul",
+                 "rotation":0,
+                 "visible":true,
+                 "width":8,
+                 "x":304.124349698731,
+                 "y":66.541263400972
+                }, 
+                {
+                 "class":"",
+                 "height":8,
+                 "id":194,
+                 "name":"fantasmaLaranja",
+                 "rotation":0,
+                 "visible":true,
+                 "width":8,
+                 "x":274.603845746162,
+                 "y":66.7856639279807
                 }],
          "offsetx":-1.95233059464735,
          "offsety":-1.95233059464736,
@@ -1033,7 +1065,7 @@
          "y":0
         }],
  "nextlayerid":3,
- "nextobjectid":191,
+ "nextobjectid":196,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.9.0",

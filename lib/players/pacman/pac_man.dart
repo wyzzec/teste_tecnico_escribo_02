@@ -5,7 +5,7 @@ import 'package:teste_tecnico_02_escribo/players/pacman/pac_man_sprite.dart';
 class PacMan extends SimplePlayer with ObjectCollision {
   PacMan(Vector2? position, {required this.estadoDoJogo})
       : super(
-          size: Vector2(20, 20),
+          size: Vector2(32, 32),
           animation: SimpleDirectionAnimation(
             idleRight: PacManSprite.idleRight,
             runRight: PacManSprite.runRight,
@@ -17,9 +17,9 @@ class PacMan extends SimplePlayer with ObjectCollision {
             runDown: PacManSprite.runDown,
           ),
           position: position ?? Vector2(10, 10),
-          speed: 60,
+          speed: 40,
         ) {
-    setupCollision(CollisionConfig(collisions: [CollisionArea.circle(radius: 6, align: Vector2(4, 4))]));
+    setupCollision(CollisionConfig(collisions: [CollisionArea.rectangle(size: Vector2(30,30))]));
   }
 
   bool modoPoderosoAtivado = false;
@@ -93,7 +93,7 @@ class PacMan extends SimplePlayer with ObjectCollision {
 
   void ativarPoder() {
     modoPoderosoAtivado = true;
-    Future.delayed(const Duration(seconds: 10), () {
+    Future.delayed(const Duration(seconds: 8), () {
       modoPoderosoAtivado = false;
     });
   }

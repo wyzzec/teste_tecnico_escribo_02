@@ -7,6 +7,9 @@ import 'package:teste_tecnico_02_escribo/components/fruta.dart';
 import 'package:teste_tecnico_02_escribo/components/incrementador_de_pontos.dart';
 import 'package:teste_tecnico_02_escribo/components/pontos_no_chao.dart';
 import 'package:teste_tecnico_02_escribo/initial_widget.dart';
+import 'package:teste_tecnico_02_escribo/players/inimigos/fantasma_azul.dart';
+import 'package:teste_tecnico_02_escribo/players/inimigos/fantasma_laranja.dart';
+import 'package:teste_tecnico_02_escribo/players/inimigos/fantasma_rosa.dart';
 import 'package:teste_tecnico_02_escribo/players/inimigos/fantasma_vermelho.dart';
 import 'package:teste_tecnico_02_escribo/players/pacman/pac_man.dart';
 import 'components/ancora_camera/ancora_camera.dart';
@@ -35,31 +38,32 @@ class Game extends StatelessWidget {
         Positioned(
           top: 40,
           left: 40,
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(
-              maxWidth: 800,
-              maxHeight: 800,
-              minWidth: 100,
-              minHeight: 100,
-            ),
+          child: SizedBox(
+            width: 600,
+            height: 300,
             child: BonfireTiledWidget(
               showCollisionArea: false,
               joystick: Joystick(
                 keyboardConfig: KeyboardConfig(),
-                directional: JoystickDirectional(),
+                directional: JoystickDirectional(
+                  margin: const EdgeInsets.only(left: 20, bottom: 150),
+                ),
               ),
               map: TiledWorldMap(
-                'mapa.tmj',
+                'pac_man_mapa.tmj',
                 objectsBuilder: {
-                  'ponto': (p) => PontosNoChao(incrementadorDePontos: context.read<IncrementadorDePontos>(), position: p.position, player: context.read<PacMan>()),
-                  'fantasmaVermelho': (p) => FantasmaVermelho(position: p.position, pacMan: context.read<PacMan>()),
-                  'fruta': (p) => Fruta(position: p.position, pacMan: context.read<PacMan>())
+                  'ponto': (p) => PontosNoChao(incrementadorDePontos: context.read<IncrementadorDePontos>(), position: p.position + Vector2(10, 10), player: context.read<PacMan>()),
+                  'fantasmaVermelho': (p) => FantasmaVermelho(position: p.position, pacMan: context.read<PacMan>(), posicaoInicial: p.position),
+                  'fruta': (p) => Fruta(position: p.position, pacMan: context.read<PacMan>()),
+                  'fantasmaLaranja' : (p) => FantasmaLaranja(position: p.position, pacMan: context.read<PacMan>(), posicaoInicial: p.position),
+                  'fantasmaAzul' : (p) => FantasmaAzul(position: p.position, pacMan: context.read<PacMan>(), posicaoInicial: p.position),
+                  'fantasmaRosa' : (p) => FantasmaRosa(position: p.position, pacMan: context.read<PacMan>(), posicaoInicial: p.position),
                 },
               ),
-              player: context.watch<PacMan>().setPositon(Vector2(3.5 * 20, 2 * 20), context.read<EstadoDoJogo>()),
+              player: context.watch<PacMan>().setPositon(Vector2(3.5 * 32, 2 * 16), context.read<EstadoDoJogo>()),
               cameraConfig: CameraConfig(
-                zoom: 1.8,
-                target: AncoraCamera(),
+                zoom: 0.6,
+                target: AncoraCamera(position: Vector2(8*32, 22*16)),
               ),
             ),
           ),

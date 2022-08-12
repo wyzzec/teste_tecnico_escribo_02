@@ -17,7 +17,7 @@ class AppWidget extends StatelessWidget {
               ChangeNotifierProvider.value(value: IncrementadorDePontos()),
               Provider.value(value: PacMan(null, estadoDoJogo: context.read<EstadoDoJogo>())),
             ],
-            child: Game())),
+            child: const Game())),
       ),
     );
   }

@@ -6,7 +6,7 @@ class FantasmaSprite {
     SpriteAnimationData.sequenced(
       amount: 1,
       stepTime: 0.1,
-      textureSize: Vector2(20, 20),
+      textureSize: Vector2(32, 32),
     ),
   );
   static get idleMortoRight => SpriteAnimation.load(
@@ -14,7 +14,7 @@ class FantasmaSprite {
     SpriteAnimationData.sequenced(
       amount: 1,
       stepTime: 0.1,
-      textureSize: Vector2(20, 20),
+      textureSize: Vector2(32, 32),
     ),
   );
   static get idleMortoUp => SpriteAnimation.load(
@@ -22,7 +22,7 @@ class FantasmaSprite {
     SpriteAnimationData.sequenced(
       amount: 1,
       stepTime: 0.1,
-      textureSize: Vector2(20, 20),
+      textureSize: Vector2(32, 32),
     ),
   );
   static get idleMortoDown => SpriteAnimation.load(
@@ -30,7 +30,7 @@ class FantasmaSprite {
     SpriteAnimationData.sequenced(
       amount: 1,
       stepTime: 0.1,
-      textureSize: Vector2(20, 20),
+      textureSize: Vector2(32, 32),
     ),
   );
   static get runMortoRight => SpriteAnimation.load(
@@ -38,7 +38,7 @@ class FantasmaSprite {
     SpriteAnimationData.sequenced(
       amount: 1,
       stepTime: 0.1,
-      textureSize: Vector2(20, 20),
+      textureSize: Vector2(32, 32),
     ),
   );
   static get runMortoLeft => SpriteAnimation.load(
@@ -46,7 +46,7 @@ class FantasmaSprite {
     SpriteAnimationData.sequenced(
       amount: 1,
       stepTime: 0.1,
-      textureSize: Vector2(20, 20),
+      textureSize: Vector2(32, 32),
     ),
   );
   static get runMortoUp => SpriteAnimation.load(
@@ -54,7 +54,7 @@ class FantasmaSprite {
     SpriteAnimationData.sequenced(
       amount: 1,
       stepTime: 0.1,
-      textureSize: Vector2(20, 20),
+      textureSize: Vector2(32, 32),
     ),
   );
   static get runMortoBaixo => SpriteAnimation.load(
@@ -62,7 +62,7 @@ class FantasmaSprite {
     SpriteAnimationData.sequenced(
       amount: 1,
       stepTime: 0.1,
-      textureSize: Vector2(20, 20),
+      textureSize: Vector2(32, 32),
     ),
   );
 
@@ -75,4 +75,16 @@ class FantasmaSprite {
       loop: false,
     ),
   );
+  static get medo => SpriteAnimation.load(
+    'players/inimigos/fantasma_com_medo.png',
+    SpriteAnimationData.sequenced(
+      amount: 1,
+      stepTime: 7,
+      textureSize: Vector2(20, 20),
+      loop: false,
+
+    ),
+  );
+
+
 }
