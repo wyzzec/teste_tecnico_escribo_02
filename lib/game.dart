@@ -56,7 +56,7 @@ class Game extends StatelessWidget {
                   'fruta': (p) => Fruta(position: p.position, pacMan: context.read<PacMan>())
                 },
               ),
-              player: context.watch<PacMan>().setPositon(Vector2(2 * 58, 1 * 34), context.read<EstadoDoJogo>()),
+              player: context.watch<PacMan>().setPositon(Vector2(3.5 * 20, 2 * 20), context.read<EstadoDoJogo>()),
               cameraConfig: CameraConfig(
                 zoom: 1.8,
                 target: AncoraCamera(),
