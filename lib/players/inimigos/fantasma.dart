@@ -1,12 +1,14 @@
 import 'package:bonfire/bonfire.dart';
 import 'package:teste_tecnico_02_escribo/players/inimigos/fantasma_sprite.dart';
+
 import '../pacman/pac_man.dart';
 
-class Fantasma extends SimpleEnemy with ObjectCollision, AutomaticRandomMovement, Sensor{
+class Fantasma extends SimpleEnemy with ObjectCollision, AutomaticRandomMovement, Sensor {
   SimpleDirectionAnimation simpleDirectionAnimation;
   PacMan pacMan;
   double radiusCollision = 6;
   Vector2 posicaoInicial;
+
   Fantasma({required Vector2 position, required this.simpleDirectionAnimation, required this.pacMan, required this.posicaoInicial})
       : super(
           position: position,
@@ -14,9 +16,8 @@ class Fantasma extends SimpleEnemy with ObjectCollision, AutomaticRandomMovement
           animation: simpleDirectionAnimation,
           speed: 47,
         ) {
-    setupCollision(CollisionConfig(collisions: [CollisionArea.rectangle(size: Vector2(30,30), align: Vector2(1, 1))]));
+    setupCollision(CollisionConfig(collisions: [CollisionArea.rectangle(size: Vector2(30, 30), align: Vector2(1, 1))]));
   }
-
 
   @override
   void update(double dt) {
@@ -26,7 +27,7 @@ class Fantasma extends SimpleEnemy with ObjectCollision, AutomaticRandomMovement
         replaceAnimation(SimpleDirectionAnimation(idleRight: FantasmaSprite.medo, runRight: FantasmaSprite.medo));
 
         speed = 40;
-        Future.delayed(const Duration(seconds: 8), (){
+        Future.delayed(const Duration(seconds: 8), () {
           replaceAnimation(simpleDirectionAnimation);
           speed = 47;
         });
@@ -57,7 +58,7 @@ class Fantasma extends SimpleEnemy with ObjectCollision, AutomaticRandomMovement
       teveContato = true;
       if (pacMan.modoPoderosoAtivado) {
         gameRef.add(GameDecoration.withAnimation(animation: FantasmaSprite.explosion, position: position, size: size));
-        Future.delayed(const Duration(milliseconds: 1400), (){
+        Future.delayed(const Duration(milliseconds: 1400), () {
           position = posicaoInicial;
 
           teveContato = false;

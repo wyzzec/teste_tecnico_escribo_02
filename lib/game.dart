@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:bonfire/bonfire.dart';
+import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:teste_tecnico_02_escribo/components/contador_de_pontos_widget.dart';
 import 'package:teste_tecnico_02_escribo/components/estado_do_jogo.dart';
@@ -12,6 +12,7 @@ import 'package:teste_tecnico_02_escribo/players/inimigos/fantasma_laranja.dart'
 import 'package:teste_tecnico_02_escribo/players/inimigos/fantasma_rosa.dart';
 import 'package:teste_tecnico_02_escribo/players/inimigos/fantasma_vermelho.dart';
 import 'package:teste_tecnico_02_escribo/players/pacman/pac_man.dart';
+
 import 'components/ancora_camera/ancora_camera.dart';
 
 class Game extends StatelessWidget {
@@ -55,15 +56,15 @@ class Game extends StatelessWidget {
                   'ponto': (p) => PontosNoChao(incrementadorDePontos: context.read<IncrementadorDePontos>(), position: p.position + Vector2(10, 10), player: context.read<PacMan>()),
                   'fantasmaVermelho': (p) => FantasmaVermelho(position: p.position, pacMan: context.read<PacMan>(), posicaoInicial: p.position),
                   'fruta': (p) => Fruta(position: p.position, pacMan: context.read<PacMan>()),
-                  'fantasmaLaranja' : (p) => FantasmaLaranja(position: p.position, pacMan: context.read<PacMan>(), posicaoInicial: p.position),
-                  'fantasmaAzul' : (p) => FantasmaAzul(position: p.position, pacMan: context.read<PacMan>(), posicaoInicial: p.position),
-                  'fantasmaRosa' : (p) => FantasmaRosa(position: p.position, pacMan: context.read<PacMan>(), posicaoInicial: p.position),
+                  'fantasmaLaranja': (p) => FantasmaLaranja(position: p.position, pacMan: context.read<PacMan>(), posicaoInicial: p.position),
+                  'fantasmaAzul': (p) => FantasmaAzul(position: p.position, pacMan: context.read<PacMan>(), posicaoInicial: p.position),
+                  'fantasmaRosa': (p) => FantasmaRosa(position: p.position, pacMan: context.read<PacMan>(), posicaoInicial: p.position),
                 },
               ),
               player: context.watch<PacMan>().setPositon(Vector2(3.5 * 32, 2 * 16), context.read<EstadoDoJogo>()),
               cameraConfig: CameraConfig(
                 zoom: 0.6,
-                target: AncoraCamera(position: Vector2(8*32, 22*16)),
+                target: AncoraCamera(position: Vector2(8 * 32, 22 * 16)),
               ),
             ),
           ),

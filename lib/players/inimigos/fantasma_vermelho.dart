@@ -8,6 +8,7 @@ import 'fantasma_vermelho_sprite.dart';
 class FantasmaVermelho extends Fantasma {
   FantasmaVermelho({required super.position, required PacMan pacMan, required posicaoInicial})
       : super(pacMan: pacMan, simpleDirectionAnimation: simpleDirectionAnimationGetter, posicaoInicial: posicaoInicial);
+
   static SimpleDirectionAnimation get simpleDirectionAnimationGetter => SimpleDirectionAnimation(
         idleRight: FantasmaVermelhoSprite.idleRight,
         runRight: FantasmaVermelhoSprite.runRight,

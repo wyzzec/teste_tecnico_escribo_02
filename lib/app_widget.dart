@@ -4,6 +4,7 @@ import 'package:teste_tecnico_02_escribo/components/estado_do_jogo.dart';
 import 'package:teste_tecnico_02_escribo/components/incrementador_de_pontos.dart';
 import 'package:teste_tecnico_02_escribo/game.dart';
 import 'package:teste_tecnico_02_escribo/players/pacman/pac_man.dart';
+
 class AppWidget extends StatelessWidget {
   const AppWidget({Key? key}) : super(key: key);
 
@@ -16,8 +17,7 @@ class AppWidget extends StatelessWidget {
             body: MultiProvider(providers: [
               ChangeNotifierProvider.value(value: IncrementadorDePontos()),
               Provider.value(value: PacMan(null, estadoDoJogo: context.read<EstadoDoJogo>())),
-            ],
-            child: const Game())),
+            ], child: const Game())),
       ),
     );
   }

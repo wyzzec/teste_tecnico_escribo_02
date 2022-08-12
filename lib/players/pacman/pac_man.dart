@@ -19,7 +19,7 @@ class PacMan extends SimplePlayer with ObjectCollision {
           position: position ?? Vector2(10, 10),
           speed: 40,
         ) {
-    setupCollision(CollisionConfig(collisions: [CollisionArea.rectangle(size: Vector2(30,30))]));
+    setupCollision(CollisionConfig(collisions: [CollisionArea.rectangle(size: Vector2(30, 30))]));
   }
 
   bool modoPoderosoAtivado = false;
@@ -31,16 +31,16 @@ class PacMan extends SimplePlayer with ObjectCollision {
 
   @override
   void update(double dt) {
-    if (moverDireita){
+    if (moverDireita) {
       moveRight(speed);
     }
-    if (moverEsquerda){
+    if (moverEsquerda) {
       moveLeft(speed);
     }
-    if (moverCima){
+    if (moverCima) {
       moveUp(speed);
     }
-    if (moverBaixo){
+    if (moverBaixo) {
       moveDown(speed);
     }
     super.update(dt);
@@ -54,6 +54,7 @@ class PacMan extends SimplePlayer with ObjectCollision {
     moverDireita = true;
     return super.moveRight(speed);
   }
+
   @override
   bool moveLeft(double speed, {bool notifyOnMove = true}) {
     moverEsquerda = true;
@@ -63,6 +64,7 @@ class PacMan extends SimplePlayer with ObjectCollision {
 
     return super.moveLeft(speed);
   }
+
   @override
   bool moveUp(double speed, {bool notifyOnMove = true}) {
     moverEsquerda = false;
@@ -71,6 +73,7 @@ class PacMan extends SimplePlayer with ObjectCollision {
     moverDireita = false;
     return super.moveUp(speed);
   }
+
   @override
   bool moveDown(double speed, {bool notifyOnMove = true}) {
     moverEsquerda = false;
@@ -79,6 +82,7 @@ class PacMan extends SimplePlayer with ObjectCollision {
     moverDireita = false;
     return super.moveDown(speed);
   }
+
   @override
   void die() {
     gameRef.add(GameDecoration.withAnimation(animation: PacManSprite.pacManDead, position: position, size: size));

@@ -20,3 +20,5 @@ erros conhecidos:
 - 2: Fantasmas as vezes ficam presos no sistema de colisão.
 - 3: Joystick está duplicando a velocidade do player. (atualizações do bonfire em breve para corrigir isso)
 - 4: O contador de pontos para de funcionar as vezes quando se usa o hot reload no build web.
+- 5: Os tiles que formam o "teto" do mapa não estão gerando a informação de colisão
+- 6: Caso tenha alguma sugestão, por favor, fique a vontade =D (Este é o meu primeiro contato com uma engine de jogos)

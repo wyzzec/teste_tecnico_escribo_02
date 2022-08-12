@@ -12,6 +12,9 @@ class ContadorDePontosWidget extends StatefulWidget {
 class _ContadorDePontosWidgetState extends State<ContadorDePontosWidget> {
   @override
   Widget build(BuildContext context) {
-    return Text(context.read<PacMan>().points.toString(), style: const TextStyle(color: Colors.green, fontSize: 18),);
+    return Text(
+      context.read<PacMan>().points.toString(),
+      style: const TextStyle(color: Colors.green, fontSize: 18),
+    );
   }
 }
