@@ -14,7 +14,7 @@ class Fantasma extends SimpleEnemy with ObjectCollision, AutomaticRandomMovement
           position: position,
           size: Vector2(32, 32),
           animation: simpleDirectionAnimation,
-          speed: 47,
+          speed: 80,
         ) {
     setupCollision(CollisionConfig(collisions: [CollisionArea.rectangle(size: Vector2(30, 30), align: Vector2(1, 1))]));
   }
@@ -26,10 +26,10 @@ class Fantasma extends SimpleEnemy with ObjectCollision, AutomaticRandomMovement
       if (pacMan.modoPoderosoAtivado) {
         replaceAnimation(SimpleDirectionAnimation(idleRight: FantasmaSprite.medo, runRight: FantasmaSprite.medo));
 
-        speed = 40;
+        speed = 65;
         Future.delayed(const Duration(seconds: 8), () {
           replaceAnimation(simpleDirectionAnimation);
-          speed = 47;
+          speed = 80;
         });
         seeAndMoveToAttackRange(
             minDistanceFromPlayer: 300,

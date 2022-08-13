@@ -296,8 +296,8 @@
                  "rotation":0,
                  "visible":true,
                  "width":32,
-                 "x":416.272818181818,
-                 "y":222.909227272727
+                 "x":416.939484848485,
+                 "y":225.575893939394
                 }, 
                 {
                  "class":"",
@@ -744,39 +744,6 @@
                 {
                  "class":"",
                  "height":32,
-                 "id":234,
-                 "name":"ponto",
-                 "rotation":0,
-                 "visible":true,
-                 "width":32,
-                 "x":704.666666666667,
-                 "y":63.6666666666666
-                }, 
-                {
-                 "class":"",
-                 "height":32,
-                 "id":237,
-                 "name":"ponto",
-                 "rotation":0,
-                 "visible":true,
-                 "width":32,
-                 "x":768,
-                 "y":96
-                }, 
-                {
-                 "class":"",
-                 "height":32,
-                 "id":239,
-                 "name":"ponto",
-                 "rotation":0,
-                 "visible":true,
-                 "width":32,
-                 "x":864.5,
-                 "y":96.5
-                }, 
-                {
-                 "class":"",
-                 "height":32,
                  "id":241,
                  "name":"ponto",
                  "rotation":0,
@@ -817,17 +784,6 @@
                  "width":32,
                  "x":671.979,
                  "y":257.10415
-                }, 
-                {
-                 "class":"",
-                 "height":32,
-                 "id":255,
-                 "name":"ponto",
-                 "rotation":0,
-                 "visible":true,
-                 "width":32,
-                 "x":864.979,
-                 "y":415.770816666667
                 }, 
                 {
                  "class":"",
@@ -964,39 +920,6 @@
                 {
                  "class":"",
                  "height":32,
-                 "id":327,
-                 "name":"ponto",
-                 "rotation":0,
-                 "visible":true,
-                 "width":32,
-                 "x":288.979,
-                 "y":416.104
-                }, 
-                {
-                 "class":"",
-                 "height":32,
-                 "id":341,
-                 "name":"ponto",
-                 "rotation":0,
-                 "visible":true,
-                 "width":32,
-                 "x":416,
-                 "y":159.666666666667
-                }, 
-                {
-                 "class":"",
-                 "height":32,
-                 "id":354,
-                 "name":"ponto",
-                 "rotation":0,
-                 "visible":true,
-                 "width":32,
-                 "x":864.181818181818,
-                 "y":159.272727272727
-                }, 
-                {
-                 "class":"",
-                 "height":32,
                  "id":359,
                  "name":"ponto",
                  "rotation":0,
@@ -1114,8 +1037,8 @@
                  "rotation":0,
                  "visible":true,
                  "width":32,
-                 "x":460.545454545455,
-                 "y":246.909090909091
+                 "x":435.212121212122,
+                 "y":247.575757575758
                 }, 
                 {
                  "class":"",
@@ -1125,8 +1048,8 @@
                  "rotation":0,
                  "visible":true,
                  "width":32,
-                 "x":546.909090909091,
-                 "y":233.818181818182
+                 "x":558.909090909091,
+                 "y":239.818181818182
                 }, 
                 {
                  "class":"",

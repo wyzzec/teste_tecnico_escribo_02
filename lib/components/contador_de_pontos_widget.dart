@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:teste_tecnico_02_escribo/components/incrementador_de_pontos.dart';
 import 'package:teste_tecnico_02_escribo/players/pacman/pac_man.dart';
 
 class ContadorDePontosWidget extends StatefulWidget {
@@ -12,9 +13,13 @@ class ContadorDePontosWidget extends StatefulWidget {
 class _ContadorDePontosWidgetState extends State<ContadorDePontosWidget> {
   @override
   Widget build(BuildContext context) {
-    return Text(
-      context.read<PacMan>().points.toString(),
-      style: const TextStyle(color: Colors.green, fontSize: 18),
+    return Consumer<IncrementadorDePontos>(
+      builder: (BuildContext context, IncrementadorDePontos value, Widget? child){
+        return Text(
+          context.read<PacMan>().points.toString(),
+          style: const TextStyle(color: Colors.green, fontSize: 26),
+        );
+      },
     );
   }
 }

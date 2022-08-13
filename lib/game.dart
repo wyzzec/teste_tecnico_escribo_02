@@ -30,11 +30,7 @@ class Game extends StatelessWidget {
         Positioned(
           top: 10,
           left: 10,
-          child: Consumer<IncrementadorDePontos>(
-            builder: (BuildContext context, IncrementadorDePontos value, Widget? child) {
-              return ContadorDePontosWidget();
-            },
-          ),
+          child: ContadorDePontosWidget()
         ),
         Positioned(
           top: 40,
