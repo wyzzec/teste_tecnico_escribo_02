@@ -60,12 +60,18 @@ class Fantasma extends SimpleEnemy with ObjectCollision, AutomaticRandomMovement
         gameRef.add(GameDecoration.withAnimation(animation: FantasmaSprite.explosion, position: position, size: size));
         Future.delayed(const Duration(milliseconds: 1400), () {
           position = posicaoInicial;
-
           teveContato = false;
         });
       } else {
         component.die();
       }
     }
+  }
+  @override
+  bool onCollision(GameComponent component, bool active) {
+    if (component is SimpleEnemy){
+      return false;
+    }
+    return super.onCollision(component, active);
   }
 }

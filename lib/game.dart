@@ -63,14 +63,14 @@ class Game extends StatelessWidget {
                       top: 40,
                       left: 40,
                       child: SizedBox(
-                        width: 600,
+                        width: 700,
                         height: 300,
                         child: BonfireTiledWidget(
                           showCollisionArea: false,
                           joystick: Joystick(
                             keyboardConfig: KeyboardConfig(),
                             directional: JoystickDirectional(
-                              margin: const EdgeInsets.only(left: 20, bottom: 150),
+                              margin: const EdgeInsets.only(left: 40, bottom: 150),
                             ),
                           ),
                           map: TiledWorldMap(
@@ -87,7 +87,7 @@ class Game extends StatelessWidget {
                           player: context.watch<PacMan>().setPositon(Vector2(3.5 * 32, 2 * 16), context.read<EstadoDoJogo>()),
                           cameraConfig: CameraConfig(
                             zoom: 0.6,
-                            target: AncoraCamera(position: Vector2(8 * 32, 22 * 16)),
+                            target: AncoraCamera(position: Vector2(11.5 * 32, 22 * 16)),
                           ),
                         ),
                       ),

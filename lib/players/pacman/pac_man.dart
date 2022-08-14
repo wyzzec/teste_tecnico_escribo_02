@@ -3,7 +3,7 @@ import 'package:teste_tecnico_02_escribo/components/estado_do_jogo.dart';
 import 'package:teste_tecnico_02_escribo/players/pacman/pac_man_sprite.dart';
 
 class PacMan extends SimplePlayer with ObjectCollision {
-  PacMan(Vector2? position, {required this.estadoDoJogo})
+  PacMan(Vector2? position, {required this.estadoDoJogo, this.points = 0})
       : super(
           size: Vector2(32, 32),
           animation: SimpleDirectionAnimation(
@@ -20,8 +20,9 @@ class PacMan extends SimplePlayer with ObjectCollision {
           speed: 40,
         ) {
     setupCollision(CollisionConfig(collisions: [CollisionArea.rectangle(size: Vector2(30, 30))]));
-  }
 
+  }
+  double points;
   bool modoPoderosoAtivado = false;
   EstadoDoJogo estadoDoJogo;
   bool moverDireita = false;
@@ -31,6 +32,7 @@ class PacMan extends SimplePlayer with ObjectCollision {
 
   @override
   void update(double dt) {
+
     if (moverDireita) {
       moveRight(speed);
     }
@@ -48,6 +50,7 @@ class PacMan extends SimplePlayer with ObjectCollision {
 
   @override
   bool moveRight(double speed, {bool notifyOnMove = true}) {
+
     moverEsquerda = false;
     moverCima = false;
     moverBaixo = false;
