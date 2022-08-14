@@ -13,7 +13,7 @@ class PontosNoChao extends GameDecoration with Sensor {
   @override
   void onContact(GameComponent component) {
     if (component is Player) {
-      incrementadorDePontos.incrementar(player);
+      incrementadorDePontos.incrementar();
       removeFromParent();
     }
   }

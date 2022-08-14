@@ -87,7 +87,7 @@ class PacMan extends SimplePlayer with ObjectCollision {
   void die() {
     gameRef.add(GameDecoration.withAnimation(animation: PacManSprite.pacManDead, position: position, size: size));
     removeFromParent();
-    estadoDoJogo.mudarEstado();
+    estadoDoJogo.finalizarJogo();
     super.die();
   }
 
