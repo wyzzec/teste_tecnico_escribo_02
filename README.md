@@ -13,6 +13,7 @@
 sistemas que serão implementados: 
 - música dinâmica 
 - ajuste de compatibilidade de telas/web
+- Controller e injetor próprio do pacote Bonfire
 
 erros conhecidos:
 
