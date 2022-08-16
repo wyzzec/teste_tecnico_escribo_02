@@ -17,7 +17,7 @@ sistemas que serão implementados:
 
 erros conhecidos:
 
-- 1: Fantasma não muda de sprite quando o app é buildado na versão mobile. (Na build web está normal)
+- 1: Fantasma não muda de sprite quando o app é buildado na versão mobile. (Na build web está normal, o motivo é que a chamada do método para troca de sprite está no método update.)
 - 2: Fantasmas as vezes ficam presos no sistema de colisão.
 - 3: Joystick está duplicando a velocidade do player. (atualizações do bonfire em breve para corrigir isso)
 - 4: O contador de pontos para de funcionar as vezes quando se usa o hot reload no build web.
